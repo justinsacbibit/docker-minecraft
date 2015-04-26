@@ -7,7 +7,7 @@ fi
 # Accept EULA
 echo eula=true > /minecraft/eula.txt
 
-./plugins.sh
+/plugins.sh
 
 java -XX:MaxPermSize=128M -Xmx2014M -jar /minecraft/spigot.jar -o true nogui
 
