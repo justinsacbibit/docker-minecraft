@@ -24,5 +24,5 @@ wget -q http://dev.bukkit.org/media/files/866/562/AdminEssentials.jar -O /minecr
 # PermissionsEx
 # wget -q http://dev.bukkit.org/media/files/874/950/PermissionsEx-1.23.2.jar -O /minecraft/plugins/permissionsex.jar
 # LWC
-wget -q http://dev.bukkit.org/media/files/718/126/LWC.jar -O /minecraft/plugins/lwc.jar
+# wget -q http://dev.bukkit.org/media/files/718/126/LWC.jar -O /minecraft/plugins/lwc.jar
 
