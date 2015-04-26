@@ -2,8 +2,10 @@
 
 if [ ! -f /minecraft/spigot.jar ]; then
     cp /spigot.jar /minecraft/spigot.jar
-    echo eula=true > /minecraft/eula.txt
 fi
+
+# Accept EULA
+echo eula=true > /minecraft/eula.txt
 
 mkdir -p /minecraft/plugins
 # Worldedit
@@ -26,6 +28,8 @@ wget -q http://dev.bukkit.org/media/files/806/317/FirstJoinPlus.jar -O /minecraf
 wget -q http://dev.bukkit.org/media/files/820/756/CoreProtect_2.10.0.jar -O /minecraft/plugins/coreprotect.jar
 # AdminEssentials
 wget -q http://dev.bukkit.org/media/files/866/562/AdminEssentials.jar -O /minecraft/plugins/adminessentials.jar
+# Lockette
+wget -q http://dev.bukkit.org/media/files/863/209/Lockette.jar -O /minecraft/plugins/lockette.jar
 
 java -XX:MaxPermSize=128M -Xmx2014M -jar /minecraft/spigot.jar -o true nogui
 
