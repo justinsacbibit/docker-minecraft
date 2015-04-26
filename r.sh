@@ -2,8 +2,10 @@
 
 if [ ! -f /minecraft/spigot.jar ]; then
     cp /spigot.jar /minecraft/spigot.jar
-    echo eula=true > /minecraft/eula.txt
 fi
+
+# Accept EULA
+echo eula=true > /minecraft/eula.txt
 
 mkdir -p /minecraft/plugins
 # Worldedit
