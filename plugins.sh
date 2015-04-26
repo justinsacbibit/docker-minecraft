@@ -21,6 +21,8 @@ wget -q http://dev.bukkit.org/media/files/806/317/FirstJoinPlus.jar -O /minecraf
 wget -q http://dev.bukkit.org/media/files/820/756/CoreProtect_2.10.0.jar -O /minecraft/plugins/coreprotect.jar
 # AdminEssentials
 wget -q http://dev.bukkit.org/media/files/866/562/AdminEssentials.jar -O /minecraft/plugins/adminessentials.jar
-# Lockette
-wget -q http://dev.bukkit.org/media/files/863/209/Lockette.jar -O /minecraft/plugins/lockette.jar
+# PermissionsEx
+wget -q http://dev.bukkit.org/media/files/874/950/PermissionsEx-1.23.2.jar -O /minecraft/plugins/permissionsex.jar
+# LWC
+wget -q http://dev.bukkit.org/media/files/718/126/LWC.jar -O /minecraft/plugins/lwc.jar
 
