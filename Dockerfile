@@ -18,7 +18,9 @@ VOLUME /minecraft
 EXPOSE 25565
 
 ADD ./spigot-1.8.3.jar /spigot.jar
+ADD ./plugins.sh /plugins.sh
 ADD ./start.sh /start.sh
-RUN chmod +x /start.sh
+RUN chmod +x /start.sh \
+  && chmod +x /plugins.sh
 ENTRYPOINT ["/bin/bash", "/start.sh"]
 
