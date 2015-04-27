@@ -1,18 +1,21 @@
 #!/bin/bash
 
-if [ ! -f /minecraft/spigot.jar ]; then
-    cp /spigot.jar /minecraft/spigot.jar
+if [ ! -f $SERVER_DIR/spigot.jar ]; then
+    cp /spigot.jar $SERVER_DIR/spigot.jar
 fi
 
 # Copy start script for restarts
-cp /start.sh /minecraft/start.sh
+cp /start.sh $SERVER_DIR/start.sh
 # Accept EULA
-echo eula=true > /minecraft/eula.txt
+echo eula=true > $SERVER_DIR/eula.txt
 
-# Get plugins
-/plugins.sh
+# Any custom configuration is handled in your config script
+# Mount a configuration directory using -v/--volume when running
+if [ -f $CONFIG_DIR/config.sh ]; then
+    $CONFIG_DIR/config.sh
+fi
 
-java -XX:MaxPermSize=128M -Xmx2014M -jar /minecraft/spigot.jar -o true nogui
+java -XX:MaxPermSize=128M -Xmx2014M -jar $SERVER_DIR/spigot.jar -o true nogui
 
 bash
 

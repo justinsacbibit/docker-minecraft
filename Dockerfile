@@ -14,15 +14,15 @@ RUN apt-get -y install openjdk-7-jre
 
 WORKDIR /minecraft
 VOLUME /minecraft
+VOLUME /minecraft-config
+
+ENV SERVER_DIR /minecraft
+ENV CONFIG_DIR /minecraft-config
 
 EXPOSE 25565
 
-ADD ./permissions.yml /permissions.yml
-
 ADD ./spigot-1.8.3.jar /spigot.jar
-ADD ./plugins.sh /plugins.sh
 ADD ./start.sh /start.sh
-RUN chmod +x /start.sh \
-  && chmod +x /plugins.sh
+RUN chmod +x /start.sh
 ENTRYPOINT ["/bin/bash", "/start.sh"]
 
