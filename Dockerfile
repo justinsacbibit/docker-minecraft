@@ -17,6 +17,8 @@ VOLUME /minecraft
 
 EXPOSE 25565
 
+ADD ./permissions.yml /permissions.yml
+
 ADD ./spigot-1.8.3.jar /spigot.jar
 ADD ./plugins.sh /plugins.sh
 ADD ./start.sh /start.sh
