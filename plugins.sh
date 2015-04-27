@@ -26,3 +26,11 @@ wget -q http://dev.bukkit.org/media/files/874/950/PermissionsEx-1.23.2.jar -O /m
 # LWC
 # wget -q http://dev.bukkit.org/media/files/718/126/LWC.jar -O /minecraft/plugins/lwc.jar
 
+# Root permissions should be empty
+echo > /minecraft/permissions.yml
+# Copy permissions if it doesn't exist
+if [ ! -f /minecraft/plugins/PermissionsEx/permissions.yml ]; then
+    mkdir -p /minecraft/plugins/PermissionsEx
+    cp /permissions.yml /minecraft/plugins/PermissionsEx/permissions.yml
+fi
+
