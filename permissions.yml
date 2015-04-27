@@ -73,5 +73,17 @@ groups:
       - essentials.warp
       - essentials.warp.list
       - essentials.worth
+  Moderator:
+    inheritance:
+      - default
+    options:
+      default: false
+      prefix: '&5[Mod]&e'
+    permissions:
+      - essentials.kick
+      - essentials.tempban
+      - essentials.time.set
+      - essentials.weather
+      - essentials.kit.tools
   Admin: {}
 schema-version: 1
