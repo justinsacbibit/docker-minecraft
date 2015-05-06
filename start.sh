@@ -15,7 +15,7 @@ if [ -f $CONFIG_DIR/config.sh ]; then
     $CONFIG_DIR/config.sh
 fi
 
-java -XX:MaxPermSize=128M -Xmx2014M -jar $SERVER_DIR/spigot.jar -o true nogui
+java -XX:MaxPermSize=128M -Xmx1024M -jar $SERVER_DIR/spigot.jar -o true nogui
 
 bash
 
