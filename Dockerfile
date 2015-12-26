@@ -20,7 +20,7 @@ ENV CONFIG_DIR /minecraft-config
 
 EXPOSE 25565
 
-ADD ./spigot-1.8.3.jar /spigot.jar
+ADD ./spigot-1.8.8.jar /spigot.jar
 ADD ./start.sh /start.sh
 RUN chmod +x /start.sh
 CMD ["/start.sh"]
